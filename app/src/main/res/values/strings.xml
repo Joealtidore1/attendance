@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Attendance Management System</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="semester">
+        <item>-Select semester-</item>
+        <item>First</item>
+        <item>Second</item>
+    </string-array>
+
+    <string-array name="role">
+        <item>-Select Role-</item>
+        <item>admin</item>
+        <item>lecturer</item>
+    </string-array>
+
+    <string-array name="designation">
+        <item>-Select Designation-</item>
+        <item>Mr.</item>
+        <item>Mrs.</item>
+        <item>Ms.</item>
+        <item>Dr.</item>
+        <item>Dr(Mrs)</item>
+        <item>Assoc. Prof.</item>
+        <item>Prof</item>
+        <item>Prof(Mrs)</item>
+    </string-array>
+</resources>

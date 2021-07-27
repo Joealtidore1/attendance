@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.AssignCourse">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="15dp"
+        android:orientation="vertical"
+        android:layout_marginVertical="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Assign Course"
+            android:textSize="18sp"
+            android:layout_above="@id/content"
+            android:textStyle="bold"
+            android:id="@+id/pageTitle"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg"
+            android:id="@+id/department"
+            android:paddingHorizontal="10dp"
+            android:layout_marginVertical="5dp"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/courseSpinner"
+            android:background="@drawable/bg"
+            android:paddingHorizontal="10dp"
+            android:layout_marginVertical="5dp"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/staffSpinner"
+            android:background="@drawable/bg"
+            android:paddingHorizontal="10dp"
+            android:layout_marginVertical="5dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/assignCourse"
+            android:text="Assign Course"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:textColor="#555"
+            android:textAllCaps="false"
+            app:backgroundTint="@null"
+            android:layout_marginVertical="5dp"
+            android:background="@color/mainColor"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:elevation="30dp"
+        android:id="@+id/addLecturerf"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/mainColor"
+            android:src="@drawable/add_dept"
+            android:layout_centerHorizontal="true"
+            app:tint="@color/white"
+            android:id="@+id/assignLecturer"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Lecturer"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/label"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/mainColor"
+            android:layout_below="@id/assignLecturer"/>
+    </RelativeLayout>
+
+</RelativeLayout>

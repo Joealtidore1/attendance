@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.AddStudent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student Registration"
+            android:id="@+id/pageTitle"
+            android:layout_margin="15dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+        <ProgressBar
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="15dp"
+            android:id="@+id/progressBar"
+            android:indeterminateTint="@color/mainColor"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scanBt"
+            android:text="Scan Bluetooth"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:textColor="#555"
+            android:layout_below="@+id/pageTitle"
+            android:textAllCaps="false"
+            app:backgroundTint="@null"
+            android:background="@color/mainColor"
+            android:layout_marginHorizontal="15dp"/>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_below="@id/pageTitle"
+                android:id="@+id/bluetoothScan"
+                android:visibility="gone"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="15dp"
+            android:visibility="gone"
+            android:id="@+id/scrollView"
+            android:layout_below="@+id/scanBt">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="5dp"
+                        android:hint="Surname*"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:boxStrokeColor="@color/black">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:id="@+id/surname"
+                            android:textSize="18sp"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="5dp"
+                        android:hint="First Name*"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:boxStrokeColor="@color/black">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:id="@+id/firstname"
+                            android:textSize="18sp"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="5dp"
+                        android:hint="Other Names"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:boxStrokeColor="@color/black">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:id="@+id/otherNames"
+                            android:textSize="18sp"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="5dp"
+                        android:hint="Register Number*"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:boxStrokeColor="@color/black">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:id="@+id/regNumber"
+                            android:textSize="18sp"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg"
+                        android:id="@+id/courseSpinner"
+                        android:layout_marginVertical="5dp"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="5dp"
+                        android:hint="Bluetooth Address*"
+                        android:visibility="visible"
+                        android:enabled="false"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:boxStrokeColor="@color/black">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:id="@+id/bluetoothId"
+                            android:textSize="18sp"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/register"
+                    android:text="Add Student"
+                    android:textSize="16sp"
+                    android:textColor="#555"
+                    android:textAllCaps="false"
+                    app:backgroundTint="@null"
+                    android:layout_marginVertical="5dp"
+                    android:background="@color/mainColor"
+                    />
+
+
+                </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

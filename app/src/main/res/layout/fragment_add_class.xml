@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.AddClass">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Course Upload"
+        android:layout_margin="15dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:id="@+id/pageTitle"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pageTitle"
+        android:layout_marginHorizontal="15dp">
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg"
+            android:id="@+id/courseSpinner"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView"
+            android:layout_below="@+id/courseSpinner"
+            android:visibility="visible">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/courseDetailsLayout"
+                    android:paddingHorizontal="10dp"
+                    android:visibility="visible"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Course Details "
+                        android:textSize="18sp"
+                        android:background="@null"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:background="@color/bgColor"
+                        android:elevation="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Course Code: "
+                            android:textSize="16sp"
+                            android:textStyle="normal"
+                            android:fontFamily="sans-serif-medium"
+                            android:id="@+id/courseCode"
+                            android:paddingBottom="10dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Course Title: "
+                            android:textSize="16sp"
+                            android:textStyle="normal"
+                            android:fontFamily="sans-serif-medium"
+                            android:id="@+id/courseTitle"
+                            android:paddingBottom="10dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Credit Hours: "
+                            android:textSize="16sp"
+                            android:textStyle="normal"
+                            android:fontFamily="sans-serif-medium"
+                            android:id="@+id/courseUnits"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Class Details "
+                        android:textSize="18sp"
+                        android:layout_marginVertical="10dp"
+                        android:background="@null"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:background="@color/bgColor"
+                        android:elevation="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No. of Enrollments: "
+                            android:textSize="16sp"
+                            android:textStyle="normal"
+                            android:fontFamily="sans-serif-medium"
+                            android:id="@+id/enrollments"
+                            android:paddingBottom="10dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No. of Classes "
+                            android:textSize="16sp"
+                            android:textStyle="normal"
+                            android:fontFamily="sans-serif-medium"
+                            android:id="@+id/noOfClasses"
+                            android:paddingBottom="10dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Average Attendance: "
+                            android:textSize="16sp"
+                            android:textStyle="normal"
+                            android:fontFamily="sans-serif-medium"
+                            android:id="@+id/averageAttendance"
+                            android:paddingBottom="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No. of Assigned Lecturers: "
+                            android:textSize="16sp"
+                            android:textStyle="normal"
+                            android:fontFamily="sans-serif-medium"
+                            android:id="@+id/noOfLecturers"
+                            />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Assigned Lecturers "
+                        android:textSize="18sp"
+                        android:layout_marginVertical="10dp"
+                        android:background="@null"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:background="@color/bgColor"
+                        android:elevation="10dp">
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Coordinator: "
+                            android:textSize="16sp"
+                            android:textStyle="normal"
+                            android:fontFamily="sans-serif-medium"
+                            android:id="@+id/coordinator"
+                            android:paddingBottom="10dp"/>-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lecturers\n"
+                            android:textSize="16sp"
+                            android:textStyle="normal"
+                            android:fontFamily="sans-serif-medium"
+                            android:id="@+id/others" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/startClass"
+                        android:text="Start class"
+                        android:textSize="16sp"
+                        android:textColor="#555"
+                        android:textAllCaps="false"
+                        app:backgroundTint="@null"
+                        android:background="@color/mainColor"
+                        android:layout_marginVertical="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>
